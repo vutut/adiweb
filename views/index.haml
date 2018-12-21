@@ -1,0 +1,31 @@
+.row.header.m-0
+  .page-header.py-4.px-5.col-sm
+    .headlines
+      - I18n.t('index-text').each do |line|
+        %h4.yellow=line
+  .col-sm.pcb-img
+.row2.py-4.px-5
+  %h3=I18n.t('news')
+  -I18n.t('news-item').each.each do |date,item|
+    .news
+      .date.yellow=date
+      .newsitem=item
+.row3.py-4.px-5
+  .scrolling-wrapper
+    - Dir["./public/img/*.jpg"].each do |image|
+      - image.slice!('./public/')
+      %img{:src => url(image)}
+.row.m-0.py-4.px-5
+  .col-sm.pl-5.contact-details
+    %h2.yellow= I18n.t('contact')
+    .address.pt-4.pb-1
+      %p.street  Františka Kadlece 9
+      %p.city 180 00 Praha 8
+      %p.country=I18n.t('country')
+    .phone.pb-1
+      %p +420 283 842 047
+      %p +420 603 475 161
+    .email.pb-1
+      %p info@mereni.cz
+
+
