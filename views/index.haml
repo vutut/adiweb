@@ -3,7 +3,9 @@
     .headlines
       - I18n.t('index-text').each do |line|
         %h4.yellow=line
-  .col-sm.pcb-img
+  .col-sm
+.swatch
+  %img{ :src => url('swatch.png')}
 .row2.py-4.px-5
   %h3=I18n.t('news')
   -I18n.t('news-item').each.each do |date,item|

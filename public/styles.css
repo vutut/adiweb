@@ -75,10 +75,12 @@ a, a:focus, a:hover{
 .header{
     background-color: #0F1E3C !important;
 }
-.pcb-img {
-    background: url(pcb.gif) no-repeat;
-    background-size: 100% 100%;
-    opacity:0.5;
+.swatch>img{
+    float: right;
+    position: relative;
+    height: 15rem;
+    margin-top: -7.5rem;
+    padding-right: 3rem;
 }
 
 .header2 {
